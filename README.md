@@ -2,7 +2,7 @@
 android, mvi,retrofit,okhttp,navigation<br>  
 
 
-##导入
+##  导入
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
