@@ -1,19 +1,17 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.gjc.mymvi'
+    namespace 'com.gjc.net'
     compileSdk rootProject.ext.build_versions.complise_sdk
 
     defaultConfig {
-        applicationId "com.gjc.mymvi"
         minSdk rootProject.ext.build_versions.min_sdk
         targetSdk rootProject.ext.build_versions.target_sdk
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
@@ -34,5 +32,9 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:$rootProject.ext.versions.kotlincorektx")
     implementation "androidx.appcompat:appcompat:$rootProject.ext.versions.appcompat"
-    implementation(project(":mvi"))
+    implementation("com.squareup.okhttp3:okhttp:${rootProject.ext.versions.okhttp}")
+    implementation("com.squareup.okhttp3:logging-interceptor:${rootProject.ext.versions.okhttp}")
+    implementation("com.squareup.okio:okio:${rootProject.ext.versions.okio}")
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.versions.retrofit"
 }
